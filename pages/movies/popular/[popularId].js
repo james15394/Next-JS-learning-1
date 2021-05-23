@@ -24,11 +24,11 @@ const Detail = ({ movie }) => {
     <div key={movie.id} className={styles.movie__single}>
       <div className={styles.inner}>
         <img
-          src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-          alt={movie.title}
+          src={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}
+          alt={movie?.title}
         />
-        <h3>{movie.title}</h3>
-        <p>{movie.overview}</p>
+        <h3>{movie?.title}</h3>
+        <p>{movie?.overview}</p>
       </div>
     </div>
   );
