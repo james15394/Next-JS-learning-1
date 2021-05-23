@@ -1,0 +1,39 @@
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0;
+  width: 100%;
+}
+.type {
+  font-size: 2rem;
+  text-transform: capitalize;
+  letter-spacing: 2px;
+}
+.movies__container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 10px;
+  overflow: hidden;
+}
+.movie {
+  width: 100%;
+  background-color: #b0adb3;
+  border-radius: 5px;
+  padding-bottom: 10px;
+}
+.img {
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.title {
+  color: #fff;
+  text-align: center;
+  font-weight: 500;
+  padding-left: 20px;
+}
