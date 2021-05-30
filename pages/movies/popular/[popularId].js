@@ -1,4 +1,6 @@
 import styles from "../../../styles/MovieSingle.module.css";
+import Image from "next/image";
+
 
 export async function getStaticPaths() {
   const res = await fetch(
@@ -23,9 +25,10 @@ const Detail = ({ movie }) => {
   return (
     <div key={movie.id} className={styles.movie__single}>
       <div className={styles.inner}>
-        <img
-          src={`https://image.tmdb.org/t/p/w500/${movie?.backdrop_path}`}
-          alt={movie?.title}
+         <Image
+          src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+          width={500}
+          height={400}
         />
         <h3>{movie?.title}</h3>
         <p>{movie?.overview}</p>
