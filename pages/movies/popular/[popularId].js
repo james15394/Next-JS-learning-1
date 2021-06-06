@@ -27,8 +27,9 @@ const Detail = ({ movie }) => {
       <div className={styles.inner}>
          <Image
           src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-          width={500}
-          height={400}
+          width={1920}
+          height={1080}
+          layout="responsive"
         />
         <h3>{movie?.title}</h3>
         <p>{movie?.overview}</p>
