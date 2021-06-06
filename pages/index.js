@@ -23,11 +23,6 @@ export default function Home({ movies }) {
       <div className={styles.movies__container}>
         {movies.map((movie) => (
           <div key={movie.id} className={styles.movie}>
-//             <img
-//               src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-//               alt={movie.title}
-//               className={styles.img}
-//             />
             <Image
               src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
               className={styles.img}
