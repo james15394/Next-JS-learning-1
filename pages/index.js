@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
+import Image from "next/image";
 
 export async function getStaticProps() {
   const res = await fetch(
@@ -22,10 +23,18 @@ export default function Home({ movies }) {
       <div className={styles.movies__container}>
         {movies.map((movie) => (
           <div key={movie.id} className={styles.movie}>
-            <img
+//             <img
+//               src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
+//               alt={movie.title}
+//               className={styles.img}
+//             />
+            <Image
               src={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`}
-              alt={movie.title}
               className={styles.img}
+              layout="responsive"
+              width="1920"
+              height="1080"
+              objectFit="cover"
             />
             <Link href={"/movies/topRated/" + movie.id}>
               <a className={styles.title}>{movie.title}</a>
