@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 50px 0;
+  padding: 50px;
   width: 100%;
 }
 .type {
@@ -16,6 +16,7 @@
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 10px;
   overflow: hidden;
+  width: 100%;
 }
 .movie {
   width: 100%;
